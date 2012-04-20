@@ -10,4 +10,4 @@ lib/libdakapi_modules.so
 bin/dakapi.cfg
 *.so
 *.cxx
-*_wrap*
+*_wrap.*
