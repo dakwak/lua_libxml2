@@ -1,0 +1,101 @@
+==12475== Memcheck, a memory error detector
+==12475== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==12475== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==12475== Command: ../../bin/runscript ../../../dakwak/dTE/test/unit/test.lua
+==12475== Parent PID: 7866
+==12475== 
+--12475-- 
+--12475-- Valgrind options:
+--12475--    -v
+--12475--    --show-reachable=yes
+--12475--    --leak-check=full
+--12475--    --log-file=valgrind.out
+--12475-- Contents of /proc/version:
+--12475--   Linux version 3.3.1-1-ARCH (tobias@T-POWA-LX) (gcc version 4.6.3 (GCC) ) #1 SMP PREEMPT Tue Apr 3 06:46:17 UTC 2012
+--12475-- Arch and hwcaps: AMD64, amd64-sse3-cx16
+--12475-- Page sizes: currently 4096, max supported 4096
+--12475-- Valgrind library directory: /usr/lib/valgrind
+--12475-- Reading syms from /home/kandie/Workspace/Projects/lua_libxml2/bin/runscript (0x400000)
+--12475-- Reading syms from /lib/ld-2.15.so (0x4000000)
+--12475-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux (0x38000000)
+--12475--    object doesn't have a symbol table
+--12475--    object doesn't have a dynamic symbol table
+--12475-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==12475== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-12475-by-kandie-on-???
+==12475== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-12475-by-kandie-on-???
+==12475== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-12475-by-kandie-on-???
+==12475== 
+==12475== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==12475== don't want to do, unless you know exactly what you're doing,
+==12475== or are doing some strange experiment):
+==12475==   /usr/lib/valgrind/../../bin/vgdb --pid=12475 ...command...
+==12475== 
+==12475== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==12475==   /path/to/gdb ../../bin/runscript
+==12475== and then give GDB the following command
+==12475==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=12475
+==12475== --pid is optional if only one valgrind process is running
+==12475== 
+--12475-- REDIR: 0x4017a20 (strlen) redirected to 0x380625a7 (???)
+--12475-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so (0x4a24000)
+--12475--    object doesn't have a symbol table
+--12475-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so (0x4c26000)
+--12475--    object doesn't have a symbol table
+--12475-- REDIR: 0x4017890 (index) redirected to 0x4c2aed0 (index)
+--12475-- REDIR: 0x4017910 (strcmp) redirected to 0x4c2be90 (strcmp)
+--12475-- Reading syms from /usr/lib/libxml2.so.2.7.8 (0x4e31000)
+--12475--    object doesn't have a symbol table
+--12475-- Reading syms from /usr/lib/liblua.so.5.1 (0x518c000)
+--12475--    object doesn't have a symbol table
+--12475-- Reading syms from /usr/lib/libstdc++.so.6.0.17 (0x53b9000)
+--12475--    object doesn't have a symbol table
+--12475-- Reading syms from /lib/libm-2.15.so (0x56bd000)
+--12475--    object doesn't have a symbol table
+--12475-- Reading syms from /usr/lib/libgcc_s.so.1 (0x59b2000)
+--12475--    object doesn't have a symbol table
+--12475-- Reading syms from /lib/libc-2.15.so (0x5bc7000)
+--12475-- Reading syms from /lib/libdl-2.15.so (0x5f68000)
+--12475--    object doesn't have a symbol table
+--12475-- Reading syms from /usr/lib/libz.so.1.2.6 (0x616c000)
+--12475--    object doesn't have a symbol table
+--12475-- REDIR: 0x5c4f3a0 (strncasecmp) redirected to 0x4a24620 (_vgnU_ifunc_wrapper)
+--12475-- REDIR: 0x5c49470 (strnlen) redirected to 0x4a24620 (_vgnU_ifunc_wrapper)
+--12475-- REDIR: 0x5c4d0e0 (strcasecmp) redirected to 0x4a24620 (_vgnU_ifunc_wrapper)
+--12475-- REDIR: 0x5c4ae60 (__GI_strrchr) redirected to 0x4c2acf0 (__GI_strrchr)
+--12475-- REDIR: 0x5c49390 (__GI_strlen) redirected to 0x4c2b230 (__GI_strlen)
+--12475-- REDIR: 0x5c47850 (strcmp) redirected to 0x4a24620 (_vgnU_ifunc_wrapper)
+--12475-- REDIR: 0x5ce1bb0 (__strcmp_sse42) redirected to 0x4c2bdd0 (strcmp)
+--12475-- REDIR: 0x5c44060 (realloc) redirected to 0x4c2a9a0 (realloc)
+--12475-- REDIR: 0x5c43fd0 (free) redirected to 0x4c29a30 (free)
+--12475-- REDIR: 0x5c49340 (strlen) redirected to 0x4a24620 (_vgnU_ifunc_wrapper)
+--12475-- REDIR: 0x5d0e3d0 (__strlen_sse2_pminub) redirected to 0x4c2b210 (strlen)
+--12475-- REDIR: 0x5c51a70 (memcpy@@GLIBC_2.14) redirected to 0x4a24620 (_vgnU_ifunc_wrapper)
+--12475-- REDIR: 0x5cf3790 (__memcpy_ssse3_back) redirected to 0x4c2c1a0 (memcpy@@GLIBC_2.14)
+--12475-- REDIR: 0x5c4b8a0 (bcmp) redirected to 0x4a24620 (_vgnU_ifunc_wrapper)
+--12475-- REDIR: 0x5d08d00 (__memcmp_sse4_1) redirected to 0x4c2cf10 (bcmp)
+--12475-- REDIR: 0x5c47790 (index) redirected to 0x4a24620 (_vgnU_ifunc_wrapper)
+--12475-- REDIR: 0x5ce1b00 (__strchr_sse42) redirected to 0x4c2ad90 (index)
+--12475-- REDIR: 0x5c43ab0 (malloc) redirected to 0x4c2a8d0 (malloc)
+--12475-- REDIR: 0x5c604b0 (strstr) redirected to 0x4a24620 (_vgnU_ifunc_wrapper)
+--12475-- REDIR: 0x5ce3ae0 (__strstr_sse42) redirected to 0x4c2da10 (strstr)
+--12475-- REDIR: 0x5c44b30 (calloc) redirected to 0x4c28f60 (calloc)
+--12475-- Reading syms from /home/kandie/Workspace/Projects/dakwak/dTE/lib/lua_dTE.so (0x6782000)
+--12475-- Reading syms from /home/kandie/Workspace/Projects/lua_libxml2/lib/lua_libxml2.so (0x698f000)
+--12475-- REDIR: 0x5c48ce0 (strcpy) redirected to 0x4a24620 (_vgnU_ifunc_wrapper)
+--12475-- REDIR: 0x5c47590 (strcat) redirected to 0x4a24620 (_vgnU_ifunc_wrapper)
+--12475-- REDIR: 0x5c59aa0 (__strcat_sse2_unaligned) redirected to 0x4c2af10 (strcat)
+--12475-- REDIR: 0x5c52fb0 (strchrnul) redirected to 0x4c2d620 (strchrnul)
+--12475-- Discarding syms at 0x69a5d10-0x6a11c40 in /home/kandie/Workspace/Projects/lua_libxml2/lib/lua_libxml2.so due to munmap()
+--12475-- Discarding syms at 0x6784800-0x678bf98 in /home/kandie/Workspace/Projects/dakwak/dTE/lib/lua_dTE.so due to munmap()
+==12475== 
+==12475== HEAP SUMMARY:
+==12475==     in use at exit: 0 bytes in 0 blocks
+==12475==   total heap usage: 3,040 allocs, 3,040 frees, 355,694 bytes allocated
+==12475== 
+==12475== All heap blocks were freed -- no leaks are possible
+==12475== 
+==12475== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 3 from 3)
+--12475-- 
+--12475-- used_suppression:      3 dl-hack3-cond-1
+==12475== 
+==12475== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 3 from 3)

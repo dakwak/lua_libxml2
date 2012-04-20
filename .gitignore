@@ -1,0 +1,13 @@
+bin
+build
+log
+exclude
+dumps/data
+dumps
+lib/
+lib*.so
+lib/libdakapi_modules.so
+bin/dakapi.cfg
+*.so
+*.cxx
+*_wrap*
