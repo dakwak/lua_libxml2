@@ -857,6 +857,7 @@ XMLPUBFUN xmlNodePtr XMLCALL
 XMLPUBFUN long XMLCALL
     xmlGetLineNo    (xmlNodePtr node);
 #if defined(LIBXML_TREE_ENABLED) || defined(LIBXML_DEBUG_ENABLED)
+%newobject xmlGetNodePath;
 XMLPUBFUN xmlChar * XMLCALL
     xmlGetNodePath    (xmlNodePtr node);
 #endif /* defined(LIBXML_TREE_ENABLED) || defined(LIBXML_DEBUG_ENABLED) */

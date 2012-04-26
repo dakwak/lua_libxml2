@@ -24456,6 +24456,7 @@ static int _wrap_xmlGetNodePath(lua_State* L) {
   
   result = (xmlChar *)xmlGetNodePath(arg1);
   lua_pushstring(L,(const char *)result); SWIG_arg++;
+  free(result);
   return SWIG_arg;
   
   if(0) SWIG_fail;
