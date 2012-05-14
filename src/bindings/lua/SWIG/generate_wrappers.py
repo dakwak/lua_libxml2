@@ -7,4 +7,4 @@ os.chdir(sys.argv[1] or ".")
 
 args = ['-Wall', '-lua']
 
-os.system("swig %s -Ipackages -o wrappers/lua_libxml2_wrap.cxx packages/lua_libxml2.i" % ' '.join(args))
+os.system("swig %s -Ipackages -o wrappers/lua_libxml2_wrap.c packages/lua_libxml2.i" % ' '.join(args))

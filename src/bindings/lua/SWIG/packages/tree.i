@@ -1015,6 +1015,7 @@ XMLPUBFUN void XMLCALL
     xmlNodeAddContentLen  (xmlNodePtr cur,
            const xmlChar *content,
            int len);
+%newobject xmlNodeGetContent;
 XMLPUBFUN xmlChar * XMLCALL
     xmlNodeGetContent (xmlNodePtr cur);
 XMLPUBFUN int XMLCALL

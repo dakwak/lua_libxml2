@@ -10,7 +10,7 @@
 //}
 
 %include "typemaps.i"
-%include "cstring.i"
+// %include "cstring.i"
 
 %include "xmlexports.i"
 %include "xmlversion.i"
