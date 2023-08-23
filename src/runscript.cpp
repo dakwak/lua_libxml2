@@ -7,7 +7,7 @@ int main(int argc, char** argv) {
     return 0;
   }
 
-  lua_State *lua = lua_open();
+  lua_State *lua = luaL_newstate();
   luaL_openlibs(lua);
 
   int rc = luaL_dofile(lua, argv[1]);
