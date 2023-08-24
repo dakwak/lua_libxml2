@@ -89,7 +89,6 @@ struct _xmlParserInput {
     xmlParserInputDeallocate free;    /* function to deallocate the base */
     const xmlChar *encoding;          /* the encoding string for entity */
     const xmlChar *version;           /* the version string for entity */
-    int standalone;                   /* Was that entity marked standalone */
     int id;                           /* an unique identifier for the entity */
 };
 
