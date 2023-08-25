@@ -11,12 +11,14 @@ INCLUDE (CMakeDependentOption)
 
 PROJECT(lua_libxml2)
 
-find_package(Lua REQUIRED)
-LIST(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMake/Modules )
-add_definitions(-DLIBXML_EXPR_ENABLED)
+
+#add_definitions(-DLIBXML_EXPR_ENABLED)
 
 
 FIND_PACKAGE(libxml2 REQUIRED)
+
+LIST(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMake/Modules )
+find_package(Lua REQUIRED)
 
 INCLUDE_DIRECTORIES(include ${LIBXML2_INCLUDE_DIR} ${Lua_INCLUDE_DIR} )
 

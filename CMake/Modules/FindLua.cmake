@@ -9,26 +9,26 @@
 #  authors: CHATGPT
 #
 
-FIND_PATH(Lua_INCLUDE_DIR_54 lua.h
-  /usr/include/lua5.4)
+FIND_PATH(Lua_INCLUDE_DIR lua.h
+  /usr/local/include)
 
-FIND_LIBRARY(Lua_LIBRARY_54 NAMES lua5.4 liblua5.4 PATHS
-  /usr/lib/x86_64-linux-gnu)
+FIND_LIBRARY(Lua_LIBRARY NAMES lua liblua PATHS
+  /usr/local/lib)
 
-IF (Lua_INCLUDE_DIR_54 AND Lua_LIBRARY_54)
+IF (Lua_INCLUDE_DIR AND Lua_LIBRARY)
   # Found Lua 5.4 libs
   SET(Lua_FOUND TRUE)
   SET(Lua_VERSION "5.4" CACHE STRING "")
-  SET(Lua_INCLUDE_DIR ${Lua_INCLUDE_DIR_54} CACHE PATH "")
-  SET(Lua_LIBRARIES ${Lua_LIBRARY_54} CACHE FILEPATH "")
-  SET(Lua_LIBRARY_NAMES "lua5.4 liblua5.4")
+  SET(Lua_INCLUDE_DIR ${Lua_INCLUDE_DIR} CACHE PATH "")
+  SET(Lua_LIBRARIES ${Lua_LIBRARY} CACHE FILEPATH "")
+  SET(Lua_LIBRARY_NAMES "lua liblua")
   MESSAGE(STATUS "Lua 5.4 was found.")
   IF (VERBOSE_FIND)
     MESSAGE(STATUS "  include path: ${Lua_INCLUDE_DIR}")
     MESSAGE(STATUS "  library path: ${Lua_LIBRARIES}")
     MESSAGE(STATUS "  libraries:    ${Lua_LIBRARY_NAMES}")
   ENDIF(VERBOSE_FIND)
-ELSE (Lua_INCLUDE_DIR_54 AND Lua_LIBRARY_54)
+ELSE (Lua_INCLUDE_DIR AND Lua_LIBRARY)
   MESSAGE(SEND_ERROR "Lua 5.4 was not found.")
-ENDIF (Lua_INCLUDE_DIR_54 AND Lua_LIBRARY_54)
+ENDIF (Lua_INCLUDE_DIR AND Lua_LIBRARY)
 

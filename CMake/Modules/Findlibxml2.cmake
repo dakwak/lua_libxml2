@@ -1,9 +1,8 @@
-#
-# this module look for libxml (http://www.xmlsoft.org) support
+# This module looks for libxml2 (http://www.xmlsoft.org) support
 # it will define the following values
 #
 # LIBXML2_INCLUDE_DIR  = where libxml/xpath.h can be found
-# LIBXML2_LIBRARIES    = the library to link against libxml2
+# LIBXML2_LIBRARIES    = the libraries to link against libxml2
 # LIBXML2_FOUND        = set to 1 if libxml2 is found
 #
 IF(EXISTS ${PROJECT_CMAKE}/libxml2Config.cmake)
@@ -13,7 +12,7 @@ ENDIF(EXISTS ${PROJECT_CMAKE}/libxml2Config.cmake)
 IF(libxml2_INCLUDE_DIRS)
 
   FIND_PATH(LIBXML2_INCLUDE_DIR libxml/xpath.h ${libxml2_INCLUDE_DIRS})
-  FIND_LIBRARY(LIBXML2_LIBRARY xml2 ${libxml2_LIBRARY_DIRS})
+  FIND_LIBRARY(LIBXML2_LIBRARIES NAMES xml2 :libxml2.a PATHS ${libxml2_LIBRARY_DIRS})
 
 ELSE(libxml2_INCLUDE_DIRS)
 
@@ -24,7 +23,7 @@ ELSE(libxml2_INCLUDE_DIRS)
     FIND_PATH(LIBXML2_INCLUDE_DIR libxml/xpath.h ${APP_INCLUDE_PATHS})
   endif(LIBXML_INCLUDE_DIR)
 
-  FIND_LIBRARY(LIBXML2_LIBRARIES xml2 ${APP_LIBRARY_PATHS})
+  FIND_LIBRARY(LIBXML2_LIBRARIES NAMES libxml2 PATHS ${APP_LIBRARY_PATHS})
 
 ENDIF(libxml2_INCLUDE_DIRS)
 
@@ -39,4 +38,5 @@ MARK_AS_ADVANCED(
   LIBXML2_INCLUDE_DIR
   LIBXML2_LIBRARIES
   LIBXML2_FOUND
-  )
+)
+

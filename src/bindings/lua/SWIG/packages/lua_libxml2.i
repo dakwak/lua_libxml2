@@ -14,7 +14,6 @@
 
 %include "xmlexports.i"
 %include "xmlversion.i"
-%include "xmlregexp.i"
 %include "xmlstring.i"
 %include "parser.i"
 %include "tree.i"
