@@ -20,3 +20,4 @@
 %include "HTMLparser.i"
 %include "HTMLtree.i"
 %include "utility.i"
+%include "globals.i"
