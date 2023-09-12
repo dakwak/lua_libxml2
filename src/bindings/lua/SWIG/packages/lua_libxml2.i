@@ -1,5 +1,6 @@
 %module lua_libxml2
 %{
+
 %}
 
 %apply char*  {xmlChar*};
@@ -20,4 +21,4 @@
 %include "HTMLparser.i"
 %include "HTMLtree.i"
 %include "utility.i"
-%include "globals.i"
+
